@@ -1,1 +1,2 @@
- x=a[0];
+
+                firstin(val);
