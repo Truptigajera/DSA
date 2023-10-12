@@ -2,19 +2,19 @@
 #include<stdlib.h>
 #define n 10
 
-int linearSearch(int a[], int N, int val) 
+int linearSearch(int a[],  int x) 
 {  
-  // Going through array sequencially  
-  for (int i = 0; i < N; i++)  
+ 
+  for (int i = 0; i < n; i++)  
     {  
-        if (a[i] == val)  
+        if (a[i] == x)  
         return i+1;  
     }  
   return -1;  
 }  
 int main()
 {
-     int a[n],i,x;
+     int a[n],i,element;
      for(i=0; i<n; i++)
 	  a[i] = rand()%99+1;
 
@@ -23,11 +23,11 @@ int main()
 	printf("%d ",a[i]);
      
      printf("\nEnter Serach Element: ");
-	scanf("%d",&x);
-	int res = linearSearch(a,x);
-	if (res == -1)
+	scanf("%d",&element);
+	int m = linearSearch(a,element);
+	if (m == -1)
 		printf("Element is not found");
 	else
-		printf("Element is found at %d position ",res);	
+		printf("Element is found at %d position ",m);	
 
 }
